@@ -1,2 +1,2 @@
-# MINERIA
-Pagina sobre mineria ecologica
+# MINERAL BANK
+ETICA CAPITALIZACION RESGUARDO
