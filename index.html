@@ -4,11 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LTM</title>
+    <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+            /* Establecer imagen de fondo */
+            background-image: url(imagenes/fondo4.png); /* Ruta a tu imagen de fondo */
+            background-size: cover; /* Ajustar el tamaño de la imagen */
+            background-position: below; /* Posición de la imagen */
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        /* Estilo para los separadores entre enlaces */
+        .separator {
+            display: inline-block;
+            margin: 0 10px;
+            color: rgba(0, 89, 255, 0.747); /* Color de la barra */
+        }
+        /* Estilos para los enlaces */
+        a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            transition: background-color 0.3s ease;
+            padding: 5px;
+        }
+        a:hover {
+            background-color: rgba(173, 216, 230, 0.6); /* Color celeste con opacidad del 60% */
+        }
+    </style>
 </head>
 <body>
-    <H1>MINERAL BANK</H1>
+    <h1 style="color:rgb(230, 3, 3);">MINERAL BANK</h1>
     <h2>Empresa Argentina</h2>
-    <p> Mineral Bank es una iniciativa que propone establecer un "Banco de Minerales" en Buenos Aires, Argentina, con el objetivo de transformar el paradigma actual del comercio global de minerales. Se posiciona como un centro de negocios nacional e internacional que busca promover el comercio y construir alianzas entre empresas y comunidades de todo el mundo. Este banco ofrecerá servicios las 24 horas del día, los 365 días del año, y proporcionará instalaciones lujosas y seguras para facilitar transacciones y reuniones comerciales. También incluirá una sección de cajas de seguridad avanzadas para la custodia de activos y documentos. Mineral Bank busca ser una plataforma innovadora para el comercio de minerales y otros sectores, promoviendo la transparencia y el desarrollo económico a través de alianzas estratégicas.</p>
-    <img src="imagenes/logo mineral bank.jpg" alt="logo de la empresa Mineral bank">
+    <div>
+        <a href="#mercado">Mercado</a>
+        <span class="separator">|</span> <!-- Barra separadora -->
+        <a href="#horario">Horario de Atención</a>
+        <span class="separator">|</span> <!-- Barra separadora -->
+        <a href="#ubicacion">Ubicación</a>
+        <span class="separator">|</span> <!-- Barra separadora -->
+        <a href="#contacto">Contacto</a>
+    </div>
+    <p id="mercado">Mineral Bank es un "Banco de Minerales" en Buenos Aires, Argentina, con el objetivo de transformar el paradigma actual del comercio global de minerales. Se posiciona como un centro de negocios nacional e internacional que busca promover el comercio y construir alianzas entre empresas y comunidades de todo el mundo.</p>
+    
 </body>
 </html>
