@@ -11,11 +11,25 @@
             font-family: Arial, sans-serif;
             color: #333;
             padding: 20px;
-            /* Establecer imagen de fondo */
-            background-image: url(imagenes/fondo4.png); /* Ruta a tu imagen de fondo */
+            background-image: url('imagenes/fondo4.png'); /* Ruta a tu imagen de fondo */
             background-size: cover; /* Ajustar el tamaño de la imagen */
-            background-position: below; /* Posición de la imagen */
+            background-position: below; 
+            opacity: 0; /* Establecer opacidad inicial a 0 */
+            animation: fadeIn 2s ease forwards; /* Aplicar animación de fadeIn */
+            min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+            display: flex;
+            flex-direction: column;
         }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0; /* Inicio de la animación con opacidad 0 */
+            }
+            100% {
+                opacity: 1; /* Final de la animación con opacidad 1 */
+            }
+        }
+
         h1, h2 {
             margin-bottom: 20px;
         }
@@ -35,21 +49,41 @@
         a:hover {
             background-color: rgba(173, 216, 230, 0.6); /* Color celeste con opacidad del 60% */
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
     </style>
 </head>
 <body>
-    <h1 style="color:rgb(230, 3, 3);">MINERAL BANK</h1>
-    <h2>Empresa Argentina</h2>
-    <div>
-        <a href="#mercado">Mercado</a>
-        <span class="separator">|</span> <!-- Barra separadora -->
-        <a href="#horario">Horario de Atención</a>
-        <span class="separator">|</span> <!-- Barra separadora -->
-        <a href="#ubicacion">Ubicación</a>
-        <span class="separator">|</span> <!-- Barra separadora -->
-        <a href="#contacto">Contacto</a>
-    </div>
-    <p id="mercado">Mineral Bank es un "Banco de Minerales" en Buenos Aires, Argentina, con el objetivo de transformar el paradigma actual del comercio global de minerales. Se posiciona como un centro de negocios nacional e internacional que busca promover el comercio y construir alianzas entre empresas y comunidades de todo el mundo.</p>
-    
+    <header>
+        <h1 style="color:rgb(230, 3, 3);">MINERAL BANK</h1>
+        <h2>Empresa Argentina</h2>
+        <nav>
+            <a href="#mercado">Mercado</a>
+            <span class="separator">|</span> <!-- Barra separadora -->
+            <a href="ubicacion.html">Ubicación</a>
+            <span class="separator">|</span> <!-- Barra separadora -->
+            <a href="contacto.html">Contacto</a> <!-- Enlace a la página de contacto -->
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre Nosotros</h2>
+            <p>Mineral Bank es un "Banco de Minerales" en Buenos Aires, Argentina, con el objetivo de transformar el paradigma actual del comercio global de minerales. Se posiciona como un centro de negocios nacional e internacional que busca promover el comercio y construir alianzas entre empresas y comunidades de todo el mundo.</p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mineral Bank - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
