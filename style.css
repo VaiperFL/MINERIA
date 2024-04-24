@@ -1,0 +1,120 @@
+/* Estilos para el cuerpo de la página */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    padding: 20px;
+    background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
+    background-position: below;
+    opacity: 0; /* Establecer opacidad inicial a 0 */
+    animation: fadeIn 2s ease forwards; /* Aplicar animación de fadeIn */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para el encabezado (header) con imagen de fondo */
+header {
+    background-image: url('imagenes/primera\ \ tapa-02\ \(2\).jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
+    background-position: center; /* Posicionar la imagen de fondo en el centro */
+    height: 400px; /* Altura del encabezado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff; /* Color del texto en el encabezado */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 100px;
+}
+
+/* Estilo para el título h1 dentro del encabezado */
+header h1 {
+    margin-bottom: 450px; /* Margen inferior para separar del siguiente elemento */
+}
+
+/* Estilo para la sección que contiene la tabla */
+section {
+    margin: 0 auto; /* Centrar horizontalmente la sección */
+    max-width: 800px; /* Ancho máximo de la sección */
+    margin-bottom: 80px; /* Agregar margen inferior para separar del pie de página */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%; /* Ancho completo de la tabla */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para las celdas de la tabla */
+th, td {
+    padding: 10px; /* Relleno interno */
+    border: 1px solid #ccc; /* Borde */
+}
+
+/* Estilos para los enlaces en el menú de navegación */
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 10px; /* Aumentar el relleno para hacer los enlaces más grandes */
+    font-size: 20px; /* Aumentar el tamaño del texto */
+    margin: 0 10px; /* Agregar margen horizontal */
+    position: relative; /* Posición relativa para permitir la superposición */
+}
+
+nav a::after {
+    content: ''; /* Contenido generado */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Grosor de la línea */
+    background-color: transparent; /* Color inicial transparente */
+    transition: background-color 0.3s ease; /* Transición del color */
+}
+
+nav a:hover::after {
+    background-color: rgba(0, 0, 0, 0.6); /* Color celeste con opacidad del 60% */
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 0; /* Aumentar el espacio interno superior e inferior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black; /* Borde superior negro */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    padding: 20px;
+    background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
+    background-position: below;
+    opacity: 0; /* Establecer opacidad inicial a 0 */
+    animation: fadeIn 0.5s ease forwards; /* Aplicar animación de fadeIn al cargar la página */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 10; /* Inicio de la animación con opacidad 0 */
+    }
+    100% {
+        opacity: 1; /* Final de la animación con opacidad 1 */
+    }
