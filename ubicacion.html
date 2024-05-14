@@ -5,11 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MINERAL BANK - ubicación</title>
     <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
+    <style>
+        /* Estilos para el botón de asistencia online */
+        .boton-asistencia {
+            position: fixed;
+            bottom: 50%;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: url(imagenes/asistente.png) no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        /* Estilos para el cuadro de chat */
+        .cuadro-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: none; /* Ocultar el cuadro de chat inicialmente */
+            z-index: 998;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1 style="color:rgb(0, 0, 0);">MINERAL MARKET</h1>
-
         <nav>
             <a href="index.html">Mercado</a>
             <span class="separator">|</span>
@@ -19,9 +46,7 @@
             <span class="separator">|</span>
             <a href="horario.html">Horario de Atención</a>
         </nav>
-        
     </header>
-    
 
     <main>
         <section>
@@ -37,5 +62,39 @@
     <footer>
         <p>&copy; 2024 Mineral Market - Todos los derechos reservados</p>
     </footer>
+
+    <!-- Botón de asistencia online -->
+    <button class="boton-asistencia" id="boton-asistencia"></button>
+
+    <!-- Cuadro de chat -->
+    <div class="cuadro-chat" id="cuadro-chat">
+        <h3>Asistencia en línea</h3>
+        <form id="formulario-chat">
+            <input type="text" id="pregunta" placeholder="Haz una pregunta...">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Script de JavaScript -->
+    <script>
+        const botonAsistencia = document.getElementById('boton-asistencia');
+        const cuadroChat = document.getElementById('cuadro-chat');
+        const formularioChat = document.getElementById('formulario-chat');
+        const preguntaInput = document.getElementById('pregunta');
+
+        botonAsistencia.addEventListener('click', () => {
+            cuadroChat.style.display = 'block';
+        });
+
+        formularioChat.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const pregunta = preguntaInput.value.trim();
+            if (pregunta !== '') {
+               
+                alert('Tu pregunta ha sido enviada: Espera a un asesor: ' + pregunta);
+                preguntaInput.value = '';
+            }
+        });
+    </script>
 </body>
 </html>

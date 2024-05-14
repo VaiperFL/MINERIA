@@ -2,7 +2,7 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    color: #000000;
+    color: #13b2dfcb;
     padding: 20px;
     background-size: cover; 
     background-position: below;
@@ -28,17 +28,39 @@ header {
     font-family: Arial, sans-serif;
     padding: 100px;
 }
-
-/* Estilo para el título h1 dentro del encabezado */
-header h1 {
-    margin-bottom: 450px; /* Margen inferior para separar del siguiente elemento */
+/* Estilos adicionales para el botón de asistencia online */
+.boton-asistencia {
+    position: fixed; /* Posición fija para que el botón esté siempre visible */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde el lado derecho */
+    background-color: #0d63be; 
+    color: #ffffff; /* Color del texto blanco */
+    font-size: 16px; 
+    padding: 10px 20px; /* Relleno interno del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 50%; /* Borde redondeado para que sea circular */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+    z-index: 9999; /* Asegura que el botón esté sobre otros elementos */
 }
 
-/* Estilo para la sección que contiene la tabla */
+/* Cambio de color de fondo al pasar el cursor sobre el botón */
+.boton-asistencia:hover {
+    background-color: #0056b3; 
+}
+
+
+
+
+header h1 {
+    margin-bottom: 450px; 
+}
+
+/* Estilo de la tabla */
 section {
-    margin: 0 auto; /* Centrar horizontalmente la sección */
-    max-width: 800px; /* Ancho máximo de la sección */
-    margin-bottom: 80px; /* Agregar margen inferior para separar del pie de página */
+    margin: 0 auto; 
+    max-width: 800px; 
+    margin-bottom: 80px; 
 }
 
 /* Estilos para la tabla */
@@ -58,10 +80,10 @@ th, td {
 nav a {
     text-decoration: none;
     color: rgb(0, 0, 0); /* Color del texto */
-    padding: 10px; /* Aumentar el relleno para hacer los enlaces más grandes */
-    font-size: 20px; /* Aumentar el tamaño del texto */
-    margin: 0 10px; /* Agregar margen horizontal */
-    position: relative; /* Posición relativa para permitir la superposición */
+    padding: 10px; 
+    font-size: 20px; 
+    margin: 0 10px;
+    position: relative; 
 }
 
 nav a::after {
@@ -104,7 +126,7 @@ body {
     background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
     background-position: below;
     opacity: 0; /* Establecer opacidad inicial a 0 */
-    animation: fadeIn 0.5s ease forwards; /* Aplicar animación de fadeIn al cargar la página */
+    animation: fadeIn 0.5s ease forwards; /*  animación de fadeIn al cargar la página */
     min-height: 100vh;
     display: flex;
     flex-direction: column;

@@ -6,41 +6,21 @@
     <title>MINERAL BANK - contacto</title>
     <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
     <style>
-        /* Estilos para el contenedor principal */
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Ajustar altura mínima */
-            background-color: #f5f5f5;
-            margin: 0; /* Eliminar márgenes predeterminados */
-            padding: 0; /* Eliminar relleno predeterminado */
-        }
-
-        /* Estilos para el contenedor del formulario */
-        main {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            width: 80%; /* Ancho del contenido */
-            max-width: 800px; /* Ancho máximo del contenido */
-            margin-top: 50px; 
-            margin-bottom: 50px; 
-
-        /* Estilos para el formulario */
+        /* Estilos específicos para el formulario de contacto */
         form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 80%; /* Ancho del formulario */
+            max-width: 800px; /* Ancho máximo del formulario */
+            margin: 50px auto; /* Margen superior e inferior de 50px y centrado horizontalmente */
+            padding: 30px; /* Relleno interno del formulario */
+            background-color: #fff; /* Color de fondo del formulario */
+            border-radius: 10px; /* Borde redondeado del formulario */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra */
         }
 
-        /* Estilos para las etiquetas y los campos de entrada */
-        label, input, textarea {
-            margin-bottom: 15px;
-            width: 100%;
-            max-width: 300px;
+        /* Estilos para el área del mensaje */
+        textarea {
+            margin-top: 10px; /* Ajuste el margen superior del área del mensaje */
+            margin-bottom: 20px; /
         }
 
         /* Estilos para el botón de enviar */
@@ -57,11 +37,38 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        /* Estilo para el botón de asistencia online */
+        .boton-asistencia {
+            position: fixed;
+            bottom: 50%;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: url(imagenes/asistente.png) no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        /* Estilo para el cuadro de chat */
+        .cuadro-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 90px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: none; /* Ocultar el cuadro */
+            z-index: 998;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1 style="color:rgb(0, 0, 0);">MINERAL</h1>
+        <h1 style="color:rgb(0, 0, 0);">MINERAL MARKET</h1>
         <nav>
             <a href="index.html">Mercado</a>
             <span class="separator">|</span>
@@ -83,7 +90,7 @@
                 <input type="email" id="email" name="email" required>
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                <input type="submit" value="Enviar">
+                <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
@@ -91,5 +98,38 @@
     <footer>
         <p>&copy; 2024 Mineral Market - Todos los derechos reservados</p>
     </footer>
+
+    <!-- Cuadro de chat -->
+    <div class="cuadro-chat" id="cuadro-chat">
+        <h3>Asistencia en línea</h3>
+        <form id="formulario-chat">
+            <input type="text" id="pregunta" placeholder="Haz una pregunta...">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Botón de asistencia online -->
+    <button class="boton-asistencia" id="boton-asistencia"></button>
+
+    <!-- Script de JavaScript -->
+    <script>
+        const botonAsistencia = document.getElementById('boton-asistencia');
+        const cuadroChat = document.getElementById('cuadro-chat');
+        const formularioChat = document.getElementById('formulario-chat');
+        const preguntaInput = document.getElementById('pregunta');
+
+        botonAsistencia.addEventListener('click', () => {
+            cuadroChat.style.display = 'block';
+        });
+
+        formularioChat.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const pregunta = preguntaInput.value.trim();
+            if (pregunta !== '') {
+                alert('Tu pregunta ha sido enviada:Espera a un asesor: ' + pregunta);
+                preguntaInput.value = '';
+            }
+        });
+    </script>
 </body>
 </html>
