@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINERAL BANK - horario</title>
+    <title>MINERAL BANK - Horario de Atención</title>
     <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
     <style>
         /* Estilo para el botón de asistencia online */
@@ -103,27 +103,9 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
+    
 
     <!-- Script de JavaScript -->
-    <script>
-        const botonAsistencia = document.getElementById('boton-asistencia');
-        const cuadroChat = document.getElementById('cuadro-chat');
-        const formularioChat = document.getElementById('formulario-chat');
-        const preguntaInput = document.getElementById('pregunta');
-
-        botonAsistencia.addEventListener('click', () => {
-            cuadroChat.style.display = 'block';
-        });
-
-        formularioChat.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const pregunta = preguntaInput.value.trim();
-            if (pregunta !== '') {
-                // Aquí puedes implementar la lógica para manejar la pregunta del usuario
-                alert('Tu pregunta ha sido enviada:Espera a un asesor: ' + pregunta);
-                preguntaInput.value = '';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

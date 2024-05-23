@@ -28,6 +28,11 @@ header {
     font-family: Arial, sans-serif;
     padding: 100px;
 }
+
+header h1 {
+    margin-bottom: 450px; 
+}
+
 /* Estilos adicionales para el botón de asistencia online */
 .boton-asistencia {
     position: fixed; /* Posición fija para que el botón esté siempre visible */
@@ -49,13 +54,6 @@ header {
     background-color: #0056b3; 
 }
 
-
-
-
-header h1 {
-    margin-bottom: 450px; 
-}
-
 /* Estilo de la tabla */
 section {
     margin: 0 auto; 
@@ -65,15 +63,39 @@ section {
 
 /* Estilos para la tabla */
 table {
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Ajuste el margen superior de la tabla */
 }
 
 /* Estilos para las celdas de la tabla */
 th, td {
-    padding: 10px; /* Relleno interno */
-    border: 1px solid #ccc; /* Borde */
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Línea inferior para cada fila */
+}
+
+/* Estilos para la primera fila (encabezado) de la tabla */
+th {
+    background-color: #007bff; /* Color de fondo para el encabezado */
+    color: #fff; /* Color de texto para el encabezado */
+}
+
+/* Estilos para las filas impares de la tabla */
+tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Color de fondo para las filas impares */
+}
+
+/* Estilos para las filas pares de la tabla */
+tr:nth-child(even) {
+    background-color: #fff; /* Color de fondo para las filas pares */
+}
+
+/* Estilos para la tabla en dispositivos móviles */
+@media screen and (max-width: 600px) {
+    th, td {
+        padding: 8px; /* Reduzca el padding en dispositivos móviles */
+    }
 }
 
 /* Estilos para los enlaces en el menú de navegación */
@@ -131,6 +153,42 @@ body {
     display: flex;
     flex-direction: column;
 }
+#chat-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#chat-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+#chat-form {
+    display: flex;
+}
+
+#message-input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#chat-form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#chat-form button:hover {
+    background-color: #0056b3;
+}
 
 /* Animación de fadeIn */
 @keyframes fadeIn {
@@ -140,3 +198,4 @@ body {
     100% {
         opacity: 1; 
     }
+}

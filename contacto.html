@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINERAL BANK - contacto</title>
+    <title>MINERAL BANK - Contacto</title>
     <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
     <style>
         /* Estilos específicos para el formulario de contacto */
@@ -17,25 +17,45 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra */
         }
 
+        /* Estilos para las etiquetas */
+        label {
+            display: block; /* Mostrar como bloque */
+            margin-bottom: 10px; /* Margen inferior */
+            font-size: 16px; /* Tamaño de fuente */
+        }
+
+        /* Estilos para los campos de entrada */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 20px); /* Ancho del campo de entrada */
+            padding: 10px; /* Relleno interno */
+            margin-bottom: 20px; /* Margen inferior */
+            border: 1px solid #ccc; /* Borde del campo de entrada */
+            border-radius: 5px; /* Borde redondeado */
+            font-family: Arial, sans-serif; /* Tipo de fuente */
+        }
+
         /* Estilos para el área del mensaje */
         textarea {
-            margin-top: 10px; /* Ajuste el margen superior del área del mensaje */
-            margin-bottom: 20px; /
+            height: 100px; /* Altura del área de mensaje */
+            font-size: 14px; /* Tamaño de fuente */
         }
 
         /* Estilos para el botón de enviar */
         input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            width: 100%; /* Ancho del botón */
+            padding: 10px; /* Relleno interno */
+            background-color: #007bff; /* Color de fondo del botón */
+            color: #fff; /* Color del texto */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Borde redondeado */
+            cursor: pointer; /* Cursor al pasar sobre el botón */
+            transition: background-color 0.3s ease; /* Transición suave */
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Cambio de color al pasar el cursor */
         }
 
         /* Estilo para el botón de asistencia online */
@@ -64,6 +84,19 @@
             display: none; /* Ocultar el cuadro */
             z-index: 998;
         }
+
+        /* Estilos para el mensaje de confirmación */
+        .confirmacion {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            display: none; /* Ocultar inicialmente */
+        }
     </style>
 </head>
 <body>
@@ -83,52 +116,42 @@
     <main>
         <section>
             <h2>Formulario de Contacto</h2>
-            <form>
+            <form id="formulario-contacto">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                <button type="submit">Enviar</button>
+                <input type="submit" value="Enviar">
             </form>
+            <div class="confirmacion" id="confirmacion">El correo fue enviado.</div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Mineral Market - Todos los derechos reservados</p>
     </footer>
+    
 
-    <!-- Cuadro de chat -->
-    <div class="cuadro-chat" id="cuadro-chat">
-        <h3>Asistencia en línea</h3>
-        <form id="formulario-chat">
-            <input type="text" id="pregunta" placeholder="Haz una pregunta...">
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-
-    <!-- Botón de asistencia online -->
-    <button class="boton-asistencia" id="boton-asistencia"></button>
-
-    <!-- Script de JavaScript -->
+    <!-- Script JavaScript -->
     <script>
-        const botonAsistencia = document.getElementById('boton-asistencia');
-        const cuadroChat = document.getElementById('cuadro-chat');
-        const formularioChat = document.getElementById('formulario-chat');
-        const preguntaInput = document.getElementById('pregunta');
+        // Función para mostrar el mensaje de confirmación
+        function mostrarConfirmacion() {
+            document.getElementById("confirmacion").style.display = "block";
+        }
 
-        botonAsistencia.addEventListener('click', () => {
-            cuadroChat.style.display = 'block';
-        });
+        // Obtener el formulario
+        var formulario = document.getElementById("formulario-contacto");
 
-        formularioChat.addEventListener('submit', (event) => {
+        // Agregar un evento de escucha para el evento submit del formulario
+        formulario.addEventListener("submit", function(event) {
+            // Prevenir el comportamiento predeterminado de enviar el formulario
             event.preventDefault();
-            const pregunta = preguntaInput.value.trim();
-            if (pregunta !== '') {
-                alert('Tu pregunta ha sido enviada:Espera a un asesor: ' + pregunta);
-                preguntaInput.value = '';
-            }
+            // Mostrar el mensaje de confirmación
+            mostrarConfirmacion();
+            // Restablecer el formulario
+            formulario.reset();
         });
     </script>
 </body>

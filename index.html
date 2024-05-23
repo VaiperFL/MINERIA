@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,7 +118,22 @@
             </tr>
         </table>
     </section>
-
+    <section>
+        <h2>FORO</h2>
+        <!-- Aquí puedes colocar el código del chat en línea -->
+        <div id="chat-container">
+            <div id="chat-messages">
+                <!-- Aquí se mostrarán los mensajes del chat -->
+            </div>
+            <form id="chat-form">
+                
+                <input type="text" id="message-input" placeholder="Escribe tu mensaje...">
+                <button type="submit">Enviar</button>
+                
+            </form>
+        </div>
+    </section>
+    
     <footer>
         <p>&copy; 2024 Mineral Market - Todos los derechos reservados</p>
     </footer>
@@ -136,25 +151,6 @@
     </div>
 
     <!-- Script de JavaScript -->
-    <script>
-        const botonAsistencia = document.getElementById('boton-asistencia');
-        const cuadroChat = document.getElementById('cuadro-chat');
-        const formularioChat = document.getElementById('formulario-chat');
-        const preguntaInput = document.getElementById('pregunta');
-
-        botonAsistencia.addEventListener('click', () => {
-            cuadroChat.style.display = 'block';
-        });
-
-        formularioChat.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const pregunta = preguntaInput.value.trim();
-            if (pregunta !== '') {
-                
-                alert('Tu pregunta ha sido enviada:Espera a un asesor: ' + pregunta);
-                preguntaInput.value = '';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
