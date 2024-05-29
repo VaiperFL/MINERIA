@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 1. Ocultar el cuadro de chat al hacer clic fuera de él
+    // Ocultar el cuadro de chat al hacer clic fuera de él
     document.addEventListener('click', function(event) {
         if (!cuadroChat.contains(event.target) && event.target !== botonAsistencia) {
             cuadroChat.style.display = 'none';
         }
     });
 
-    // 2. Mostrar un mensaje cuando el formulario de chat está vacío
+    //  Mostrar un mensaje cuando el formulario de chat está vacío
     formularioChat.addEventListener('submit', function(event) {
         const pregunta = preguntaInput.value.trim();
         if (pregunta === '') {
@@ -33,22 +33,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 3. Cambiar el color del botón de asistencia al pasar el cursor sobre él
+    //  Cambia el color del botón de asistencia al pasar el cursor 
     botonAsistencia.addEventListener('mouseover', function() {
         botonAsistencia.style.backgroundColor = '#0056b3';
     });
 
-    // 4. Cambiar el color del botón de asistencia cuando el cursor sale de él
+    // Cambia el color del botón de asistencia cuando el cursor sale 
     botonAsistencia.addEventListener('mouseout', function() {
         botonAsistencia.style.backgroundColor = '#0d63be';
     });
 
-    // 5. Ocultar el cuadro de chat al enviar el formulario
+    //  Ocultar el cuadro de chat al enviar el formulario
     formularioChat.addEventListener('submit', function() {
         cuadroChat.style.display = 'none';
     });
 
-    // 6. Ajustar el tamaño del cuadro de chat al cambiar el tamaño de la ventana
+   
     window.addEventListener('resize', function() {
         if (window.innerWidth < 768) {
             cuadroChat.style.width = '80%';
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 7. Funcionalidad del chat en línea
+    //  Funcionalidad del chat en línea
     const chatForm = document.getElementById('chat-form');
     const messageInput = document.getElementById('message-input');
     const chatMessages = document.getElementById('chat-messages');

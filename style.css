@@ -18,12 +18,12 @@ header {
     background-image: url('imagenes/primera\ \ tapa-02\ \(2\).jpg'); 
     background-size: cover; 
     background-position: center; 
-    height: 400px; /* Altura del encabezado */
+    height: 400px; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #fff; /* Color del texto en el encabezado */
+    color: #fff; 
     text-align: center;
     font-family: Arial, sans-serif;
     padding: 100px;
@@ -32,6 +32,7 @@ header {
 header h1 {
     margin-bottom: 450px; 
 }
+
 
 /* Estilos adicionales para el botón de asistencia online */
 .boton-asistencia {
@@ -49,12 +50,12 @@ header h1 {
     z-index: 9999; 
 }
 
-/* Cambio de color de fondo al pasar el cursor sobre el botón */
+
 .boton-asistencia:hover {
     background-color: #0056b3; 
 }
 
-/* Estilo de la tabla */
+
 section {
     margin: 0 auto; 
     max-width: 800px; 
@@ -65,14 +66,14 @@ section {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px; /* Ajuste el margen superior de la tabla */
+    margin-top: 20px; 
 }
 
 /* Estilos para las celdas de la tabla */
 th, td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd; /* Línea inferior para cada fila */
+    border-bottom: 1px solid #ddd; 
 }
 
 /* Estilos para la primera fila (encabezado) de la tabla */
@@ -81,22 +82,64 @@ th {
     color: #fff; 
 }
 
-/* Estilos para las filas impares de la tabla */
+
 tr:nth-child(odd) {
     background-color: #f2f2f2; 
 }
 
-/* Estilos para las filas pares de la tabla */
+
 tr:nth-child(even) {
     background-color: #fff; 
 }
 
-/* Estilos para la tabla en dispositivos móviles */
+/* Estilos para la tabla en celulares */
 @media screen and (max-width: 600px) {
     th, td {
-        padding: 8px; /* Reduzca el padding en dispositivos móviles */
+        padding: 8px; 
     }
 }
+/* Integrantes */
+.integrantes {
+    display: flex; /*  flexbox */
+    justify-content: space-between; 
+    margin: 30px auto; 
+    max-width: 800px; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+.integrante {
+    flex: 1; 
+    margin: 0 10px; 
+    text-align: center; 
+}
+
+/* Estilos para la imagen  */
+.integrante img {
+    max-width: 100%; 
+    border-radius: 50%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px; 
+}
+
+/* Estilos para el nombre del integrante */
+.integrante h3 {
+    color: #007bff; 
+    font-size: 20px; 
+    margin-bottom: 10px; /
+}
+
+/*  descripción   */
+.integrante p {
+    color: #333; 
+    font-size: 16px; 
+    line-height: 1.4; 
+    margin-bottom: 10px;
+}
+
 
 /* Estilos para los enlaces en el menú de navegación */
 nav a {
@@ -109,18 +152,18 @@ nav a {
 }
 
 nav a::after {
-    content: ''; /* Contenido generado */
+    content: ''; 
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px; /* Grosor de la línea */
-    background-color: transparent; /* Color inicial transparente */
+    height: 2px; 
+    background-color: transparent; 
     transition: background-color 0.3s ease; 
 }
 
 nav a:hover::after {
-    background-color: rgba(0, 0, 0, 0.6); /* Color celeste con opacidad del 60% */
+    background-color: rgba(0, 0, 0, 0.6); 
 }
 
 /* Estilos para el pie de página (footer) */
@@ -132,12 +175,13 @@ footer {
     background-color: #333;
     color: #ffffff;
     text-align: center;
-    padding: 8px 0; /* Aumentar el espacio interno superior e inferior */
+    padding: 8px 0; 
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid black; /* Borde superior negro */
+    border-top: 2px solid black; 
 }
+
 
 /* Estilos para el cuerpo de la página */
 body {
