@@ -6,31 +6,21 @@
     <title>MINERAL BANK - mercado</title>
     <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
     <style>
-        /* Estilo para el botón de asistencia online */
-        .boton-asistencia {
-            position: fixed;
-            bottom: 50%;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border: none;
-            background: url(imagenes/asistente.png) no-repeat center center;
-            background-size: cover;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 9999;
+        /* Estilo para el contenedor del video */
+        .video-container {
+            float: left; /* Alinear el contenedor del video a la izquierda */
+            margin-right: 20px; /* Dar un margen a la derecha */
+            border: 2px solid #ccc; /* Añadir un borde alrededor del video */
+            padding: 10px; /* Añadir un espacio interno alrededor del video */
+            height: 500px; /* Altura del contenedor del video */
         }
 
-        /* Estilo para el cuadro de chat */
-        .cuadro-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            display: none; 
-            z-index: 998;
+        /* Estilo para el foro */
+        .foro-container {
+            float: left; /* Alinear el contenedor del foro a la izquierda */
+            margin-right: 20px; /* Dar un margen a la derecha */
+            border: 2px solid #ccc; /* Añadir un borde alrededor del foro */
+            padding: 10px; /* Añadir un espacio interno alrededor del foro */
         }
     </style>
 </head>
@@ -50,7 +40,6 @@
     </header>
 
     <section>
-        
         <h2>Últimos Precios de Metales</h2>
         <table border="1" cellspacing="0" cellpadding="8">
             <tr>
@@ -118,7 +107,14 @@
             </tr>
         </table>
     </section>
-    <section>
+
+    <!-- Contenedor del video -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/CatEXzcy3Uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Contenedor del foro -->
+    <div class="foro-container">
         <h2>FORO</h2>
         <!-- codigo del chat en línea -->
         <div id="chat-container">
@@ -132,8 +128,10 @@
                 
             </form>
         </div>
-    </section>
-    
+    </div>
+
+    <!-- Resto del código HTML -->
+
     <footer>
         <p>&copy; 2024 Mineral Market - Todos los derechos reservados</p>
     </footer>
