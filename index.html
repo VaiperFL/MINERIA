@@ -6,21 +6,45 @@
     <title>MINERAL BANK - mercado</title>
     <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
     <style>
-        /* Estilo para el contenedor del video */
-        .video-container {
-            float: left; /* Alinear el contenedor del video a la izquierda */
-            margin-right: 20px; /* Dar un margen a la derecha */
-            border: 2px solid #ccc; /* Añadir un borde alrededor del video */
-            padding: 10px; /* Añadir un espacio interno alrededor del video */
-            height: 500px; /* Altura del contenedor del video */
+        /* Estilo para el botón de asistencia online */
+        .boton-asistencia {
+            position: fixed;
+            bottom: 50%;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: url(imagenes/asistente.png) no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
         }
 
-        /* Estilo para el foro */
-        .foro-container {
-            float: left; /* Alinear el contenedor del foro a la izquierda */
-            margin-right: 20px; /* Dar un margen a la derecha */
-            border: 2px solid #ccc; /* Añadir un borde alrededor del foro */
-            padding: 10px; /* Añadir un espacio interno alrededor del foro */
+        /* Estilo para el cuadro de chat */
+        .cuadro-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: none; 
+            z-index: 998;
+        }
+
+        /* Estilo para los videos */
+        .video-container {
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 49%;
+            box-sizing: border-box;
+            padding: 0 5px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 315px;
         }
     </style>
 </head>
@@ -108,13 +132,17 @@
         </table>
     </section>
 
-    <!-- Contenedor del video -->
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/CatEXzcy3Uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <!-- Contenedor del foro -->
-    <div class="foro-container">
+    <section>
+        <h2>Videos Informativos</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CatEXzcy3Uk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/b0rEXwDu1pk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <section>
         <h2>FORO</h2>
         <!-- codigo del chat en línea -->
         <div id="chat-container">
@@ -122,16 +150,12 @@
                 <!-- los mensajes del chat -->
             </div>
             <form id="chat-form">
-                
                 <input type="text" id="message-input" placeholder="Escribe tu mensaje...">
                 <button type="submit">Enviar</button>
-                
             </form>
         </div>
-    </div>
-
-    <!-- Resto del código HTML -->
-
+    </section>
+    
     <footer>
         <p>&copy; 2024 Mineral Market - Todos los derechos reservados</p>
     </footer>
@@ -150,5 +174,4 @@
 
     <!-- Script de JavaScript -->
     <script src="script.js"></script>
-</body>
-</html>
+</body
